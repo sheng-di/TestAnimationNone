@@ -8,7 +8,7 @@ import React from "react"
 
 import { createNativeStackNavigator } from "react-native-screens/native-stack"
 import { WelcomeScreen, DemoScreen } from "../screens"
-
+import { createStackNavigator, TransitionSpecs, CardStyleInterpolators, TransitionPresets } from '@react-navigation/stack'
 /**
  * This type allows TypeScript to know what routes are defined in this navigator
  * as well as what properties (if any) they might take when navigating to them.
@@ -27,15 +27,15 @@ export type PrimaryParamList = {
 }
 
 // Documentation: https://github.com/software-mansion/react-native-screens/tree/master/native-stack
-const Stack = createNativeStackNavigator<PrimaryParamList>()
+const Stack = createStackNavigator<PrimaryParamList>()
 
 export function PrimaryNavigator() {
   return (
     <Stack.Navigator
       screenOptions={{
         headerShown: false,
-        gestureEnabled: true,
-        stackAnimation: 'none'
+        gestureEnabled: false,
+        ...TransitionPresets.SlideFromRightIOS
       }}
     >
       <Stack.Screen name="welcome" component={WelcomeScreen} />
