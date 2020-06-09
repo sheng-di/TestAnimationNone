@@ -34,9 +34,11 @@ export function PrimaryNavigator() {
         headerShown: false,
         gestureEnabled: false,
         cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+        // dark or transparent color to avoid android white flash.
         cardStyle: {
-          backgroundColor: '#000', // dark color to avoid android white flash.
-          opacity: 1
+          backgroundColor: 'transparent',
+          opacity: 1,
+          shadowOpacity: 1
         }
       }}
     >
