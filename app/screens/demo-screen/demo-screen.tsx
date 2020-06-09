@@ -151,6 +151,82 @@ export const DemoScreen: Component = observer(function DemoScreen() {
           <Image source={heart} style={HEART} />
           <Text style={LOVE} text="by Infinite Red" />
         </View>
+        <Text style={TITLE} preset="header" tx="demoScreen.title" />
+        <Text style={TAGLINE} tx="demoScreen.tagLine" />
+        <BulletItem text="Load up Reactotron!  You can inspect your app, view the events, interact, and so much more!" />
+        <BulletItem text="Integrated here, Navigation with State, TypeScript, Storybook, Solidarity, and i18n." />
+        <View>
+          <Button
+            style={DEMO}
+            textStyle={DEMO_TEXT}
+            tx="demoScreen.reactotron"
+            onPress={demoReactotron}
+          />
+          <Text style={HINT} tx={`demoScreen.${Platform.OS}ReactotronHint`} />
+        </View>
+        <Image source={logoIgnite} style={IGNITE} />
+        <View style={LOVE_WRAPPER}>
+          <Text style={LOVE} text="Made with" />
+          <Image source={heart} style={HEART} />
+          <Text style={LOVE} text="by Infinite Red" />
+        </View>
+        <Text style={TITLE} preset="header" tx="demoScreen.title" />
+        <Text style={TAGLINE} tx="demoScreen.tagLine" />
+        <BulletItem text="Load up Reactotron!  You can inspect your app, view the events, interact, and so much more!" />
+        <BulletItem text="Integrated here, Navigation with State, TypeScript, Storybook, Solidarity, and i18n." />
+        <View>
+          <Button
+            style={DEMO}
+            textStyle={DEMO_TEXT}
+            tx="demoScreen.reactotron"
+            onPress={demoReactotron}
+          />
+          <Text style={HINT} tx={`demoScreen.${Platform.OS}ReactotronHint`} />
+        </View>
+        <Image source={logoIgnite} style={IGNITE} />
+        <View style={LOVE_WRAPPER}>
+          <Text style={LOVE} text="Made with" />
+          <Image source={heart} style={HEART} />
+          <Text style={LOVE} text="by Infinite Red" />
+        </View>
+        <Text style={TITLE} preset="header" tx="demoScreen.title" />
+        <Text style={TAGLINE} tx="demoScreen.tagLine" />
+        <BulletItem text="Load up Reactotron!  You can inspect your app, view the events, interact, and so much more!" />
+        <BulletItem text="Integrated here, Navigation with State, TypeScript, Storybook, Solidarity, and i18n." />
+        <View>
+          <Button
+            style={DEMO}
+            textStyle={DEMO_TEXT}
+            tx="demoScreen.reactotron"
+            onPress={demoReactotron}
+          />
+          <Text style={HINT} tx={`demoScreen.${Platform.OS}ReactotronHint`} />
+        </View>
+        <Image source={logoIgnite} style={IGNITE} />
+        <View style={LOVE_WRAPPER}>
+          <Text style={LOVE} text="Made with" />
+          <Image source={heart} style={HEART} />
+          <Text style={LOVE} text="by Infinite Red" />
+        </View>
+        <Text style={TITLE} preset="header" tx="demoScreen.title" />
+        <Text style={TAGLINE} tx="demoScreen.tagLine" />
+        <BulletItem text="Load up Reactotron!  You can inspect your app, view the events, interact, and so much more!" />
+        <BulletItem text="Integrated here, Navigation with State, TypeScript, Storybook, Solidarity, and i18n." />
+        <View>
+          <Button
+            style={DEMO}
+            textStyle={DEMO_TEXT}
+            tx="demoScreen.reactotron"
+            onPress={demoReactotron}
+          />
+          <Text style={HINT} tx={`demoScreen.${Platform.OS}ReactotronHint`} />
+        </View>
+        <Image source={logoIgnite} style={IGNITE} />
+        <View style={LOVE_WRAPPER}>
+          <Text style={LOVE} text="Made with" />
+          <Image source={heart} style={HEART} />
+          <Text style={LOVE} text="by Infinite Red" />
+        </View>
       </Screen>
     </View>
   )

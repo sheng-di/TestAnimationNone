@@ -8,7 +8,7 @@ import React from "react"
 
 import { createNativeStackNavigator } from "react-native-screens/native-stack"
 import { WelcomeScreen, DemoScreen } from "../screens"
-import { createStackNavigator, TransitionSpecs, CardStyleInterpolators, TransitionPresets } from '@react-navigation/stack'
+import { createStackNavigator, TransitionSpecs, c, TransitionPresets, CardStyleInterpolators } from '@react-navigation/stack'
 /**
  * This type allows TypeScript to know what routes are defined in this navigator
  * as well as what properties (if any) they might take when navigating to them.
@@ -35,7 +35,7 @@ export function PrimaryNavigator() {
       screenOptions={{
         headerShown: false,
         gestureEnabled: false,
-        ...TransitionPresets.SlideFromRightIOS
+        cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS
       }}
     >
       <Stack.Screen name="welcome" component={WelcomeScreen} />

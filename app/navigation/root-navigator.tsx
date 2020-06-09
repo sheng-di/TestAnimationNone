@@ -31,7 +31,6 @@ const RootStack = () => {
   return (
     <Stack.Navigator
       screenOptions={{
-        headerShown: false,
         gestureEnabled: true,
       }}
     >
