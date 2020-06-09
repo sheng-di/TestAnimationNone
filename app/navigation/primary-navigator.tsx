@@ -35,6 +35,7 @@ export function PrimaryNavigator() {
       screenOptions={{
         headerShown: false,
         gestureEnabled: true,
+        stackAnimation: 'none'
       }}
     >
       <Stack.Screen name="welcome" component={WelcomeScreen} />
