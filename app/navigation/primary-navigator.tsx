@@ -6,7 +6,6 @@
  */
 import React from "react"
 
-import { createNativeStackNavigator } from "react-native-screens/native-stack"
 import { WelcomeScreen, DemoScreen } from "../screens"
 import { createStackNavigator, TransitionSpecs, c, TransitionPresets, CardStyleInterpolators } from '@react-navigation/stack'
 /**
@@ -26,7 +25,6 @@ export type PrimaryParamList = {
   demo: undefined
 }
 
-// Documentation: https://github.com/software-mansion/react-native-screens/tree/master/native-stack
 const Stack = createStackNavigator<PrimaryParamList>()
 
 export function PrimaryNavigator() {
@@ -35,7 +33,11 @@ export function PrimaryNavigator() {
       screenOptions={{
         headerShown: false,
         gestureEnabled: false,
-        cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS
+        cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+        cardStyle: {
+          backgroundColor: '#000', // dark color to avoid android white flash.
+          opacity: 1
+        }
       }}
     >
       <Stack.Screen name="welcome" component={WelcomeScreen} />
