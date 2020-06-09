@@ -6,8 +6,8 @@
  */
 import React from "react"
 
-import { WelcomeScreen, DemoScreen } from "../screens"
-import { createStackNavigator, TransitionSpecs, c, TransitionPresets, CardStyleInterpolators } from '@react-navigation/stack'
+import { WelcomeScreen, DemoScreen, NewScreen } from "../screens"
+import { createStackNavigator, TransitionPresets } from '@react-navigation/stack'
 /**
  * This type allows TypeScript to know what routes are defined in this navigator
  * as well as what properties (if any) they might take when navigating to them.
@@ -23,6 +23,7 @@ import { createStackNavigator, TransitionSpecs, c, TransitionPresets, CardStyleI
 export type PrimaryParamList = {
   welcome: undefined
   demo: undefined
+  new: undefined
 }
 
 const Stack = createStackNavigator<PrimaryParamList>()
@@ -33,7 +34,7 @@ export function PrimaryNavigator() {
       screenOptions={{
         headerShown: false,
         gestureEnabled: false,
-        cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+        ...TransitionPresets.SlideFromRightIOS,
         // dark or transparent color to avoid android white flash.
         cardStyle: {
           backgroundColor: 'transparent',
@@ -44,6 +45,7 @@ export function PrimaryNavigator() {
     >
       <Stack.Screen name="welcome" component={WelcomeScreen} />
       <Stack.Screen name="demo" component={DemoScreen} />
+      <Stack.Screen name="new" component={NewScreen} />
     </Stack.Navigator>
   )
 }

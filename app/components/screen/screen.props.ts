@@ -28,6 +28,11 @@ export interface ScreenProps {
   statusBar?: "light-content" | "dark-content"
 
   /**
+   * Background color of status bar
+   */
+  statusBarBackgroundColor?: string,
+
+  /**
    * Should we not wrap in SafeAreaView? Defaults to false.
    */
   unsafe?: boolean

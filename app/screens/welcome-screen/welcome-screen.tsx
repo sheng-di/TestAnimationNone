@@ -78,6 +78,7 @@ const FOOTER_CONTENT: ViewStyle = {
 export const WelcomeScreen: Component = observer(function WelcomeScreen() {
   const navigation = useNavigation()
   const nextScreen = () => navigation.navigate("demo")
+  const newScreen = () => navigation.navigate("new")
 
   return (
     <View style={FULL}>
@@ -107,6 +108,12 @@ export const WelcomeScreen: Component = observer(function WelcomeScreen() {
             textStyle={CONTINUE_TEXT}
             tx="welcomeScreen.continue"
             onPress={nextScreen}
+          />
+          <Button
+            style={CONTINUE}
+            textStyle={CONTINUE_TEXT}
+            text="新的页面"
+            onPress={newScreen}
           />
         </View>
       </SafeAreaView>
