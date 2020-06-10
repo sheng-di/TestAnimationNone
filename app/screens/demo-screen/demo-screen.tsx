@@ -124,13 +124,15 @@ export const DemoScreen: Component = observer(function DemoScreen() {
   return (
     <View style={FULL}>
       <Wallpaper />
-      <Header
-        headerTx="demoScreen.howTo"
-        leftIcon="back"
-        onLeftPress={goBack}
-        style={HEADER}
-        titleStyle={HEADER_TITLE}
-      />
+      <View style={CONTAINER}>
+        <Header
+          headerTx="demoScreen.howTo"
+          leftIcon="back"
+          onLeftPress={goBack}
+          style={HEADER}
+          titleStyle={HEADER_TITLE}
+        />
+      </View>
       <Screen style={CONTAINER} preset="scroll" backgroundColor={color.transparent}>
         <Text style={TITLE} preset="header" tx="demoScreen.title" />
         <Text style={TAGLINE} tx="demoScreen.tagLine" />
