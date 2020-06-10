@@ -1590,6 +1590,13 @@
     react-is "^16.13.0"
     use-subscription "^1.4.0"
 
+"@react-navigation/material-top-tabs@^5.2.10":
+  version "5.2.10"
+  resolved "https://registry.npm.taobao.org/@react-navigation/material-top-tabs/download/@react-navigation/material-top-tabs-5.2.10.tgz#6144217267253fb889d55ba91344832223322e63"
+  integrity sha1-YUQhcmclP7iJ1VupE0SDIiMyLmM=
+  dependencies:
+    color "^3.1.2"
+
 "@react-navigation/native@^5.1.5":
   version "5.5.1"
   resolved "https://registry.npm.taobao.org/@react-navigation/native/download/@react-navigation/native-5.5.1.tgz#e669d9561e54d86b1315637b8d5630dc55ee9383"
@@ -11166,6 +11173,13 @@ react-native-localize@^1.0.0:
   resolved "https://registry.npm.taobao.org/react-native-localize/download/react-native-localize-1.4.0.tgz#4653596d066d0941c48f5404dc1c0d08b6950443"
   integrity sha1-RlNZbQZtCUHEj1QE3BwNCLaVBEM=
 
+react-native-reanimated@^2.0.0-alpha.1:
+  version "2.0.0-alpha.1"
+  resolved "https://registry.npm.taobao.org/react-native-reanimated/download/react-native-reanimated-2.0.0-alpha.1.tgz#d8d451aeb8e31b59e36664749a2c00c736c981e9"
+  integrity sha1-2NRRrrjjG1njZmR0miwAxzbJgek=
+  dependencies:
+    fbjs "^1.0.0"
+
 react-native-safe-area-context@0.7.3:
   version "0.7.3"
   resolved "https://registry.npm.taobao.org/react-native-safe-area-context/download/react-native-safe-area-context-0.7.3.tgz#ad6bd4abbabe195332c53810e4ce5851eb21aa2a"
@@ -11200,6 +11214,11 @@ react-native-swipe-gestures@^1.0.4:
   version "1.0.5"
   resolved "https://registry.npm.taobao.org/react-native-swipe-gestures/download/react-native-swipe-gestures-1.0.5.tgz#a172cb0f3e7478ccd681fd36b8bfbcdd098bde7c"
   integrity sha1-oXLLDz50eMzWgf02uL+83QmL3nw=
+
+react-native-tab-view@^2.14.4:
+  version "2.14.4"
+  resolved "https://registry.npm.taobao.org/react-native-tab-view/download/react-native-tab-view-2.14.4.tgz?cache=0&sync_timestamp=1591268863941&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact-native-tab-view%2Fdownload%2Freact-native-tab-view-2.14.4.tgz#740007e62c8723c6813b8c8a05caaaf82c816620"
+  integrity sha1-dAAH5iyHI8aBO4yKBcqq+CyBZiA=
 
 react-native@0.61.5:
   version "0.61.5"

@@ -9,7 +9,7 @@ import { NavigationContainer, NavigationContainerRef } from "@react-navigation/n
 
 import { PrimaryNavigator } from "./primary-navigator"
 
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
 import { NewScreen } from "../screens"
 import { Icon } from "@ui-kitten/components"
 
@@ -28,7 +28,7 @@ export type RootParamList = {
   NewScreen: undefined
 }
 
-const Stack = createBottomTabNavigator<RootParamList>()
+const Stack = createMaterialTopTabNavigator<RootParamList>()
 
 const RootStack = () => {
   return (
