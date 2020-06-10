@@ -9,7 +9,9 @@ import { NavigationContainer, NavigationContainerRef } from "@react-navigation/n
 
 import { PrimaryNavigator } from "./primary-navigator"
 
-import { createStackNavigator } from '@react-navigation/stack'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { NewScreen } from "../screens"
+import { Icon } from "@ui-kitten/components"
 
 /**
  * This type allows TypeScript to know what routes are defined in this navigator
@@ -22,23 +24,44 @@ import { createStackNavigator } from '@react-navigation/stack'
  *   https://reactnavigation.org/docs/typescript#type-checking-the-navigator
  */
 export type RootParamList = {
-  primaryStack: undefined
+  PrimaryNavigator: undefined,
+  NewScreen: undefined
 }
 
-const Stack = createStackNavigator<RootParamList>()
+const Stack = createBottomTabNavigator<RootParamList>()
 
 const RootStack = () => {
   return (
     <Stack.Navigator
-      screenOptions={{
-        gestureEnabled: true,
-      }}
     >
       <Stack.Screen
-        name="primaryStack"
+        name="PrimaryNavigator"
         component={PrimaryNavigator}
         options={{
-          headerShown: false,
+          tabBarLabel: '首页',
+          // eslint-disable-next-line react/display-name
+          tabBarIcon: ({ color, size }) => (
+            <Icon
+              style={{ height: size, width: size }}
+              fill={color}
+              name='home'
+            />
+          )
+        }}
+      />
+      <Stack.Screen
+        name="NewScreen"
+        component={NewScreen}
+        options={{
+          tabBarLabel: '新页面',
+          // eslint-disable-next-line react/display-name
+          tabBarIcon: ({ color, size }) => (
+            <Icon
+              style={{ height: size, width: size }}
+              fill={color}
+              name='copy-outline'
+            />
+          )
         }}
       />
     </Stack.Navigator>
