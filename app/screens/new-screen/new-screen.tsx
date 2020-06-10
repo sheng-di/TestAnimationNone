@@ -1,9 +1,10 @@
 import React, { FunctionComponent as Component } from "react"
-import { TextStyle, View, ViewStyle } from "react-native"
+import { TextStyle, View, ViewStyle, StyleSheet } from "react-native"
 import { useNavigation } from "@react-navigation/native"
 import { observer } from "mobx-react-lite"
-import { Header, Text, Screen, Wallpaper } from "../../components"
+import { Header, Screen, Wallpaper } from "../../components"
 import { color, spacing } from "../../theme"
+import { Layout, Text, Icon } from '@ui-kitten/components'
 
 const FULL: ViewStyle = { flex: 1 }
 const CONTAINER: ViewStyle = {
@@ -23,13 +24,19 @@ const HEADER_TITLE: TextStyle = {
   textAlign: "center",
   letterSpacing: 1.5,
 }
-const TITLE: TextStyle = {
-  ...BOLD,
-  fontSize: 28,
-  lineHeight: 38,
-  textAlign: "center",
-  marginBottom: spacing[5],
+
+const LAYOUT_STYLE: ViewStyle = {
+  flex: 1,
+  justifyContent: 'center',
+  alignItems: 'center'
 }
+
+const styles = StyleSheet.create({
+  icon: {
+    height: 32,
+    width: 32
+  }
+})
 
 export const NewScreen: Component = observer(function NewScreen() {
   const navigation = useNavigation()
@@ -46,7 +53,14 @@ export const NewScreen: Component = observer(function NewScreen() {
           style={HEADER}
           titleStyle={HEADER_TITLE}
         />
-        <Text style={TITLE} preset="header" text="这里只留下了一个文本" />
+        <Layout style={LAYOUT_STYLE}>
+          <Text category='h1'>HOME</Text>
+          <Icon
+            style={styles.icon}
+            fill='#8F9BB3'
+            name='star'
+          />
+        </Layout>
       </Screen>
     </View>
   )

@@ -1115,6 +1115,21 @@
   resolved "https://registry.npm.taobao.org/@emotion/weak-memoize/download/@emotion/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
   integrity sha1-ju2YLi7m9/TkTCU+EpYpgHke/UY=
 
+"@eva-design/dss@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.npm.taobao.org/@eva-design/dss/download/@eva-design/dss-2.0.0.tgz#d0038b43dfa3bcb925bc3ab4433e55d10bd92ea1"
+  integrity sha1-0AOLQ9+jvLklvDq0Qz5V0QvZLqE=
+
+"@eva-design/eva@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.npm.taobao.org/@eva-design/eva/download/@eva-design/eva-2.0.0.tgz#6a6265322f66441a8765307f5197fd8117506d1e"
+  integrity sha1-amJlMi9mRBqHZTB/UZf9gRdQbR4=
+
+"@eva-design/processor@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.npm.taobao.org/@eva-design/processor/download/@eva-design/processor-2.0.0.tgz#b291fd94e11fd342fb06af6c333b2be99f4696a9"
+  integrity sha1-spH9lOEf00L7Bq9sMzsr6Z9Glqk=
+
 "@hapi/address@2.x.x":
   version "2.1.4"
   resolved "https://registry.npm.taobao.org/@hapi/address/download/@hapi/address-2.1.4.tgz?cache=0&sync_timestamp=1584171913757&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40hapi%2Faddress%2Fdownload%2F%40hapi%2Faddress-2.1.4.tgz#5d67ed43f3fd41a69d4b9ff7b56e7c0d1d0a81e5"
@@ -2302,6 +2317,24 @@
     lodash "^4.17.15"
     semver "^7.3.2"
     tsutils "^3.17.1"
+
+"@ui-kitten/components@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.npm.taobao.org/@ui-kitten/components/download/@ui-kitten/components-5.0.0.tgz#6a41719220f1c98afc3721abc19659f7e3a129ed"
+  integrity sha1-akFxkiDxyYr8NyGrwZZZ9+OhKe0=
+  dependencies:
+    "@eva-design/dss" "^2.0.0"
+    "@eva-design/processor" "^2.0.0"
+    fecha "3.0.3"
+    hoist-non-react-statics "^3.2.1"
+    lodash.merge "^4.6.1"
+
+"@ui-kitten/eva-icons@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.npm.taobao.org/@ui-kitten/eva-icons/download/@ui-kitten/eva-icons-5.0.0.tgz#b8ab2fea3dafcb9f914534ef66a5dfd1badfeb1d"
+  integrity sha1-uKsv6j2vy5+RRTTvZqXf0brf6x0=
+  dependencies:
+    react-native-eva-icons "^1.3.1"
 
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
@@ -3680,7 +3713,7 @@ body-parser@1.19.0:
     raw-body "2.4.0"
     type-is "~1.6.17"
 
-boolbase@~1.0.0:
+boolbase@^1.0.0, boolbase@~1.0.0:
   version "1.0.0"
   resolved "https://registry.npm.taobao.org/boolbase/download/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
   integrity sha1-aN/1++YMUes3cl6p4+0xDcwed24=
@@ -4764,6 +4797,16 @@ css-select@^1.1.0:
     domutils "1.5.1"
     nth-check "~1.0.1"
 
+css-select@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.npm.taobao.org/css-select/download/css-select-2.1.0.tgz#6a34653356635934a81baca68d0255432105dbef"
+  integrity sha1-ajRlM1ZjWTSoG6ymjQJVQyEF2+8=
+  dependencies:
+    boolbase "^1.0.0"
+    css-what "^3.2.1"
+    domutils "^1.7.0"
+    nth-check "^1.0.2"
+
 css-to-react-native@^2.2.1:
   version "2.3.2"
   resolved "https://registry.npm.taobao.org/css-to-react-native/download/css-to-react-native-2.3.2.tgz#e75e2f8f7aa385b4c3611c52b074b70a002f2e7d"
@@ -4773,10 +4816,23 @@ css-to-react-native@^2.2.1:
     css-color-keywords "^1.0.0"
     postcss-value-parser "^3.3.0"
 
+css-tree@^1.0.0-alpha.39:
+  version "1.0.0-alpha.39"
+  resolved "https://registry.npm.taobao.org/css-tree/download/css-tree-1.0.0-alpha.39.tgz#2bff3ffe1bb3f776cf7eefd91ee5cba77a149eeb"
+  integrity sha1-K/8//huz93bPfu/ZHuXLp3oUnus=
+  dependencies:
+    mdn-data "2.0.6"
+    source-map "^0.6.1"
+
 css-what@2.1:
   version "2.1.3"
   resolved "https://registry.npm.taobao.org/css-what/download/css-what-2.1.3.tgz#a6d7604573365fe74686c3f311c56513d88285f2"
   integrity sha1-ptdgRXM2X+dGhsPzEcVlE9iChfI=
+
+css-what@^3.2.1:
+  version "3.3.0"
+  resolved "https://registry.npm.taobao.org/css-what/download/css-what-3.3.0.tgz#10fec696a9ece2e591ac772d759aacabac38cd39"
+  integrity sha1-EP7Glqns4uWRrHctdZqsq6w4zTk=
 
 cssesc@^3.0.0:
   version "3.0.0"
@@ -5132,7 +5188,7 @@ domutils@1.5.1:
     dom-serializer "0"
     domelementtype "1"
 
-domutils@^1.5.1:
+domutils@^1.5.1, domutils@^1.7.0:
   version "1.7.0"
   resolved "https://registry.npm.taobao.org/domutils/download/domutils-1.7.0.tgz#56ea341e834e06e6748af7a1cb25da67ea9f8c2a"
   integrity sha1-Vuo0HoNOBuZ0ivehyyXaZ+qfjCo=
@@ -6056,6 +6112,11 @@ fbjs@^1.0.0:
     setimmediate "^1.0.5"
     ua-parser-js "^0.7.18"
 
+fecha@3.0.3:
+  version "3.0.3"
+  resolved "https://registry.npm.taobao.org/fecha/download/fecha-3.0.3.tgz?cache=0&sync_timestamp=1583206406295&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ffecha%2Fdownload%2Ffecha-3.0.3.tgz#fabbd416497649a42c24d34bfa726b579203a1e2"
+  integrity sha1-+rvUFkl2SaQsJNNL+nJrV5IDoeI=
+
 figgy-pudding@^3.5.1:
   version "3.5.2"
   resolved "https://registry.npm.taobao.org/figgy-pudding/download/figgy-pudding-3.5.2.tgz#b4eee8148abb01dcf1d1ac34367d59e12fa61d6e"
@@ -6830,7 +6891,7 @@ hoist-non-react-statics@^2.3.1:
   resolved "https://registry.npm.taobao.org/hoist-non-react-statics/download/hoist-non-react-statics-2.5.5.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fhoist-non-react-statics%2Fdownload%2Fhoist-non-react-statics-2.5.5.tgz#c5903cf409c0dfd908f388e619d86b9c1174cb47"
   integrity sha1-xZA89AnA39kI84jmGdhrnBF0y0c=
 
-hoist-non-react-statics@^3.3.0:
+hoist-non-react-statics@^3.2.1, hoist-non-react-statics@^3.3.0:
   version "3.3.2"
   resolved "https://registry.npm.taobao.org/hoist-non-react-statics/download/hoist-non-react-statics-3.3.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fhoist-non-react-statics%2Fdownload%2Fhoist-non-react-statics-3.3.2.tgz#ece0acaf71d62c2969c2ec59feff42a4b1a85b45"
   integrity sha1-7OCsr3HWLClpwuxZ/v9CpLGoW0U=
@@ -8593,6 +8654,11 @@ lodash.memoize@^4.1.2:
   resolved "https://registry.npm.taobao.org/lodash.memoize/download/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
   integrity sha1-vMbEmkKihA7Zl/Mj6tpezRguC/4=
 
+lodash.merge@^4.6.1:
+  version "4.6.2"
+  resolved "https://registry.npm.taobao.org/lodash.merge/download/lodash.merge-4.6.2.tgz#558aa53b43b661e1925a0afdfa36a9a1085fe57a"
+  integrity sha1-VYqlO0O2YeGSWgr9+japoQhf5Xo=
+
 lodash.pad@^4.5.1:
   version "4.5.1"
   resolved "https://registry.npm.taobao.org/lodash.pad/download/lodash.pad-4.5.1.tgz#4330949a833a7c8da22cc20f6a26c4d59debba70"
@@ -8811,6 +8877,11 @@ md5.js@^1.3.4:
     hash-base "^3.0.0"
     inherits "^2.0.1"
     safe-buffer "^5.1.2"
+
+mdn-data@2.0.6:
+  version "2.0.6"
+  resolved "https://registry.npm.taobao.org/mdn-data/download/mdn-data-2.0.6.tgz?cache=0&sync_timestamp=1590573018599&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fmdn-data%2Fdownload%2Fmdn-data-2.0.6.tgz#852dc60fcaa5daa2e8cf6c9189c440ed3e042978"
+  integrity sha1-hS3GD8ql2qLoz2yRicRA7T4EKXg=
 
 media-typer@0.3.0:
   version "0.3.0"
@@ -9603,7 +9674,7 @@ npmlog@^4.1.2:
     gauge "~2.7.3"
     set-blocking "~2.0.0"
 
-nth-check@~1.0.1:
+nth-check@^1.0.2, nth-check@~1.0.1:
   version "1.0.2"
   resolved "https://registry.npm.taobao.org/nth-check/download/nth-check-1.0.2.tgz#b2bd295c37e3dd58a3bf0700376663ba4d9cf05c"
   integrity sha1-sr0pXDfj3VijvwcAN2Zjuk2c8Fw=
@@ -11052,6 +11123,11 @@ react-lifecycles-compat@^3.0.4:
   resolved "https://registry.npm.taobao.org/react-lifecycles-compat/download/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha1-TxonOv38jzSIqMUWv9p4+HI1I2I=
 
+react-native-eva-icons@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.npm.taobao.org/react-native-eva-icons/download/react-native-eva-icons-1.3.1.tgz#1e6e019b0fd3cb1669db50bd6bbdaa6d89327593"
+  integrity sha1-Hm4Bmw/TyxZp21C9a72qbYkydZM=
+
 react-native-flipper@^0.34.0:
   version "0.34.0"
   resolved "https://registry.npm.taobao.org/react-native-flipper/download/react-native-flipper-0.34.0.tgz#7df1f38ba5d97a9321125fe0fccbe47d99e6fa1d"
@@ -11103,6 +11179,14 @@ react-native-splash-screen@3.2.0:
   version "3.2.0"
   resolved "https://registry.npm.taobao.org/react-native-splash-screen/download/react-native-splash-screen-3.2.0.tgz#d47ec8557b1ba988ee3ea98d01463081b60fff45"
   integrity sha1-1H7IVXsbqYjuPqmNAUYwgbYP/0U=
+
+react-native-svg@^12.1.0:
+  version "12.1.0"
+  resolved "https://registry.npm.taobao.org/react-native-svg/download/react-native-svg-12.1.0.tgz#acfe48c35cd5fca3d5fd767abae0560c36cfc03d"
+  integrity sha1-rP5Iw1zV/KPV/XZ6uuBWDDbPwD0=
+  dependencies:
+    css-select "^2.1.0"
+    css-tree "^1.0.0-alpha.39"
 
 react-native-swipe-gestures@^1.0.4:
   version "1.0.5"

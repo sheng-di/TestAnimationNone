@@ -23,6 +23,9 @@ import {
   useNavigationPersistence,
 } from "./navigation"
 import { RootStore, RootStoreProvider, setupRootStore } from "./models"
+import { ApplicationProvider, IconRegistry } from '@ui-kitten/components'
+import * as eva from '@eva-design/eva'
+import { EvaIconsPack } from '@ui-kitten/eva-icons'
 
 export const NAVIGATION_PERSISTENCE_KEY = "NAVIGATION_STATE"
 
@@ -57,11 +60,14 @@ const App: Component<{}> = () => {
   return (
     <RootStoreProvider value={rootStore}>
       <SafeAreaProvider initialSafeAreaInsets={initialWindowSafeAreaInsets}>
-        <RootNavigator
-          ref={navigationRef}
-          initialState={initialNavigationState}
-          onStateChange={onNavigationStateChange}
-        />
+        <IconRegistry icons={EvaIconsPack} />
+        <ApplicationProvider {...eva} theme={eva.light}>
+          <RootNavigator
+            ref={navigationRef}
+            initialState={initialNavigationState}
+            onStateChange={onNavigationStateChange}
+          />
+        </ApplicationProvider>
       </SafeAreaProvider>
     </RootStoreProvider>
   )
