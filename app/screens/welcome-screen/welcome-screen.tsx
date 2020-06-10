@@ -81,6 +81,7 @@ export const WelcomeScreen: Component = observer(function WelcomeScreen() {
   const nextScreen = () => navigation.navigate("demo")
   const newScreen = () => navigation.navigate("new")
   const awesomeScreen = () => navigation.navigate("awesome")
+  const questionScreen = () => navigation.navigate("question")
 
   return (
     <View style={FULL}>
@@ -122,6 +123,12 @@ export const WelcomeScreen: Component = observer(function WelcomeScreen() {
             textStyle={CONTINUE_TEXT}
             text="awesome"
             onPress={awesomeScreen}
+          />
+          <Button
+            style={CONTINUE}
+            textStyle={CONTINUE_TEXT}
+            text="question"
+            onPress={questionScreen}
           />
         </View>
       </SafeAreaView>

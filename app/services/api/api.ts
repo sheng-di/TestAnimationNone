@@ -1,7 +1,10 @@
+import { Alert } from 'react-native'
+import { ProductSnapshot } from './../../models/product/product'
 import { ApisauceInstance, create, ApiResponse } from "apisauce"
 import { getGeneralApiProblem } from "./api-problem"
 import { ApiConfig, DEFAULT_API_CONFIG } from "./api-config"
 import * as Types from "./api.types"
+import { GetProductResponse } from '../../models'
 
 /**
  * Manages all requests to the API.
@@ -97,6 +100,39 @@ export class Api {
       return { kind: "ok", user: resultUser }
     } catch {
       return { kind: "bad-data" }
+    }
+  }
+
+  /**
+   * Get Products
+   */
+  async getProducts(): Promise<Types.GetProductsResult> {
+    // make the api call
+    const response: ApiResponse<any> = await this.apisauce.get(
+      `/getJoke`,
+      {
+        // eslint-disable-next-line @typescript-eslint/camelcase
+        page: 1, count: 10, type: 'image'
+      }
+    )
+    console.tron.logImportant(response)
+    // the typical ways to die when calling an api
+    if (!response.ok) {
+      const problem = getGeneralApiProblem(response)
+      if (problem) return problem
+    }
+    if (response.data.code !== 200) {
+      Alert.alert(response.data.message)
+      return { kind: response.data.code }
+    }
+    // transform the data into the format we are expecting
+    try {
+      const res: GetProductResponse = response.data
+      const convertedProducts: ProductSnapshot[] = res.result.map(v => v)
+      return { kind: 'ok', products: convertedProducts }
+    } catch (e) {
+      __DEV__ && console.tron.log(e.message)
+      return { kind: 'bad-data' }
     }
   }
 }
