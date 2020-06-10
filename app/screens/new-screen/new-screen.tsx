@@ -45,7 +45,7 @@ export const NewScreen: Component = observer(function NewScreen() {
   return (
     <View style={FULL}>
       <Wallpaper />
-      <Screen style={CONTAINER} preset="scroll" backgroundColor={color.transparent} statusBarBackgroundColor='#4e2f4d'>
+      <Screen style={CONTAINER} preset="scroll" backgroundColor={color.transparent} statusBarBackgroundColor={color.headerBackground}>
         <Header
           headerText="新的页面"
           leftIcon="back"

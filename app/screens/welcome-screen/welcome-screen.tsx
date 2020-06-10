@@ -59,6 +59,7 @@ const CONTENT: TextStyle = {
   marginBottom: spacing[5],
 }
 const CONTINUE: ViewStyle = {
+  marginTop: 20,
   paddingVertical: spacing[4],
   paddingHorizontal: spacing[4],
   backgroundColor: "#5D2555",
@@ -79,11 +80,12 @@ export const WelcomeScreen: Component = observer(function WelcomeScreen() {
   const navigation = useNavigation()
   const nextScreen = () => navigation.navigate("demo")
   const newScreen = () => navigation.navigate("new")
+  const awesomeScreen = () => navigation.navigate("awesome")
 
   return (
     <View style={FULL}>
       <Wallpaper />
-      <Screen style={CONTAINER} preset="scroll" backgroundColor={color.transparent}>
+      <Screen style={CONTAINER} preset="scroll" backgroundColor={color.transparent} statusBarBackgroundColor={color.headerBackground}>
         <Header headerTx="welcomeScreen.poweredBy" style={HEADER} titleStyle={HEADER_TITLE} />
         <Text style={TITLE_WRAPPER}>
           <Text style={TITLE} text="Your new app, " />
@@ -114,6 +116,12 @@ export const WelcomeScreen: Component = observer(function WelcomeScreen() {
             textStyle={CONTINUE_TEXT}
             text="新的页面"
             onPress={newScreen}
+          />
+          <Button
+            style={CONTINUE}
+            textStyle={CONTINUE_TEXT}
+            text="awesome"
+            onPress={awesomeScreen}
           />
         </View>
       </SafeAreaView>
