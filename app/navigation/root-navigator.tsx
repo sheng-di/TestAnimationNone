@@ -6,12 +6,9 @@
  */
 import React from "react"
 import { NavigationContainer, NavigationContainerRef } from "@react-navigation/native"
-
-import { PrimaryNavigator } from "./primary-navigator"
-
-import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
-import { NewScreen } from "../screens"
-import { Icon } from "@ui-kitten/components"
+import { NewScreen, DemoScreen, AwesomeScreen, QuestionScreen } from "../screens"
+import { createStackNavigator, TransitionPresets } from "@react-navigation/stack"
+import { HomeTabNavigator } from "./home-navigator"
 
 /**
  * This type allows TypeScript to know what routes are defined in this navigator
@@ -23,49 +20,37 @@ import { Icon } from "@ui-kitten/components"
  *   https://reactnavigation.org/docs/params/
  *   https://reactnavigation.org/docs/typescript#type-checking-the-navigator
  */
+
 export type RootParamList = {
-  PrimaryNavigator: undefined,
-  NewScreen: undefined
+  home: undefined,
+  demo: undefined
+  new: undefined,
+  awesome: undefined,
+  question: undefined
 }
 
-const Stack = createMaterialTopTabNavigator<RootParamList>()
-
+const SStack = createStackNavigator<RootParamList>()
 const RootStack = () => {
   return (
-    <Stack.Navigator
-      tabBarPosition='bottom'
+    <SStack.Navigator
+      screenOptions={{
+        headerShown: false,
+        gestureEnabled: false,
+        ...TransitionPresets.SlideFromRightIOS,
+        // dark or transparent color to avoid android white flash.
+        cardStyle: {
+          backgroundColor: 'transparent',
+          opacity: 1,
+          shadowOpacity: 1
+        }
+      }}
     >
-      <Stack.Screen
-        name="PrimaryNavigator"
-        component={PrimaryNavigator}
-        options={{
-          tabBarLabel: '首页',
-          // eslint-disable-next-line react/display-name
-          tabBarIcon: ({ color, size }) => (
-            <Icon
-              style={{ height: size, width: size }}
-              fill={color}
-              name='home'
-            />
-          )
-        }}
-      />
-      <Stack.Screen
-        name="NewScreen"
-        component={NewScreen}
-        options={{
-          tabBarLabel: '新页面',
-          // eslint-disable-next-line react/display-name
-          tabBarIcon: ({ color, size }) => (
-            <Icon
-              style={{ height: size, width: size }}
-              fill={color}
-              name='copy-outline'
-            />
-          )
-        }}
-      />
-    </Stack.Navigator>
+      <SStack.Screen name="home" component={HomeTabNavigator} />
+      <SStack.Screen name="demo" component={DemoScreen} />
+      <SStack.Screen name="new" component={NewScreen} />
+      <SStack.Screen name="awesome" component={AwesomeScreen} />
+      <SStack.Screen name="question" component={QuestionScreen} />
+    </SStack.Navigator>
   )
 }
 
@@ -81,3 +66,15 @@ export const RootNavigator = React.forwardRef<
 })
 
 RootNavigator.displayName = "RootNavigator"
+
+/**
+ * A list of routes from which we're allowed to leave the app when
+ * the user presses the back button on Android.
+ *
+ * Anything not on this list will be a standard `back` action in
+ * react-navigation.
+ *
+ * `canExit` is used in ./app/app.tsx in the `useBackButtonHandler` hook.
+ */
+const exitRoutes = ['home', 'new']
+export const canExit = (routeName: string) => exitRoutes.includes(routeName)
