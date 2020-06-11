@@ -11173,10 +11173,10 @@ react-native-localize@^1.0.0:
   resolved "https://registry.npm.taobao.org/react-native-localize/download/react-native-localize-1.4.0.tgz#4653596d066d0941c48f5404dc1c0d08b6950443"
   integrity sha1-RlNZbQZtCUHEj1QE3BwNCLaVBEM=
 
-react-native-reanimated@^2.0.0-alpha.1:
-  version "2.0.0-alpha.1"
-  resolved "https://registry.npm.taobao.org/react-native-reanimated/download/react-native-reanimated-2.0.0-alpha.1.tgz#d8d451aeb8e31b59e36664749a2c00c736c981e9"
-  integrity sha1-2NRRrrjjG1njZmR0miwAxzbJgek=
+react-native-reanimated@^1.9.0:
+  version "1.9.0"
+  resolved "https://registry.npm.taobao.org/react-native-reanimated/download/react-native-reanimated-1.9.0.tgz#38676c99dd585504fdc7331efb45e5f48ec7339a"
+  integrity sha1-OGdsmd1YVQT9xzMe+0Xl9I7HM5o=
   dependencies:
     fbjs "^1.0.0"
 

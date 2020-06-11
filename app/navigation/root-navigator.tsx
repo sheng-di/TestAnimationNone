@@ -33,6 +33,7 @@ const Stack = createMaterialTopTabNavigator<RootParamList>()
 const RootStack = () => {
   return (
     <Stack.Navigator
+      tabBarPosition='bottom'
     >
       <Stack.Screen
         name="PrimaryNavigator"
